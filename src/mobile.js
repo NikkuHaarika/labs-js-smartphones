@@ -57,7 +57,10 @@ class IPhone extends SmartPhone {
         this.NoOfAndroidMobiles=NoOfAndroidMobiles;
         this.NoOfIPhoneMobiles=NoOfIPhoneMobiles;
     }
+
     changeMobileAvailabilityNumber(count,type){
+        this.NoOfMobiles=this.NoOfMobiles - count;
+        // this.NoOfAndroidMobiles = this.NoOfAndroidMobiles - count;
         if(type === 'android'){
             this.NoOfAndroidMobiles = this.NoOfAndroidMobiles - count;
             return 'Available android mobiles are '+ this.NoOfAndroidMobiles;
